@@ -1,0 +1,43 @@
+---
+import Card from '../components/Card.astro'
+---
+
+<section class="py-16 lg:py-32">
+  <div class="container flex flex-col gap-16">
+    <div class="flex flex-col gap-4">
+      <h2 class="text-neutral-700 text-3xl lg:text-4xl [&>strong]:font-medium">
+        <strong>Explora</strong> nuestros grupos
+      </h2>
+      <p class="text-neutral-500 lg:text-lg">
+        Encuentra comunidades especializadas en tu tecnología favorita y colabora con otros desarrolladores.
+      </p>
+    </div>
+
+    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-16">
+      <li>
+        <Card
+          type="primary"
+          icon="star"
+          title="Backend"
+          description="Domina el lado del servidor, bases de datos y arquitecturas escalables."
+        />
+      </li>
+      <li>
+        <Card
+          type="light"
+          icon="ellipse"
+          title="Frontend"
+          description="Crea interfaces interactivas y atractivas con las últimas tecnologías web."
+        />
+      </li>
+      <li>
+        <Card
+          type="secondary"
+          icon="square"
+          title="Talleres"
+          description="Aprende y practica con sesiones en vivo dirigidas por expertos."
+        />
+      </li>
+    </ul>
+  </div>
+</section>

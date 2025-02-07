@@ -1,0 +1,33 @@
+---
+import { Button } from 'free-astro-components'
+import CTA from '../sections/CTA.astro'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import Hero from '../sections/Hero.astro'
+import Intro from '../sections/Intro.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Alexo Dev">
+  <Header />
+  <main>
+    <Hero
+      align="center"
+      title="Únete a la comunidad Alexo Dev"
+      description="Conéctate con programadores, comparte conocimientos y crece junto a una comunidad apasionada por la tecnología."
+    >
+      <div>
+        <Button href="https://chat.whatsapp.com/KIYkyiwbQkNIUdHNTDB5GQ" label="Únete ahora" />
+      </div>
+    </Hero>
+    <Intro />
+    <CTA
+      align="center"
+      title="<strong>Explora</strong> nuestros grupos"
+      description="Encuentra comunidades especializadas en tu tecnología favorita y colabora con otros desarrolladores."
+    >
+      <Button href="https://chat.whatsapp.com/KIYkyiwbQkNIUdHNTDB5GQ" label="Explora la comunidad" />
+    </CTA>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,43 @@
+---
+import { ThemeSwitch } from 'free-astro-components'
+---
+
+<header
+  class="fixed inset-x-0 top-0 bg-neutral-100/60 text-neutral-700 py-4 border-b border-neutral-300/50 backdrop-blur-md z-20"
+>
+  <div class="container flex justify-between items-center gap-8">
+    <a
+      class="text-primary hover:text-secondary text-2xl font-light leading-none transition duration-300 ease-in-out"
+      href="/"
+      aria-label="Logo name"
+    >
+       alexo dev
+    </a>
+
+    <nav>
+      <ul class="flex items-center gap-8">
+        <li>
+          <ThemeSwitch />
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import { DOMLoaded } from '../ts/utils'
+
+  DOMLoaded(() => {
+    const body = document.querySelector('body') as HTMLElement
+    const hamburguer = document.querySelector(
+      '[data-hamburguer]'
+    ) as HTMLButtonElement
+    const nav = document.querySelector('[data-nav]') as HTMLElement
+
+    hamburguer.addEventListener('click', () => {
+      hamburguer.toggleAttribute('open')
+      nav.toggleAttribute('open')
+      body.classList.toggle('overflow-hidden')
+    })
+  })
+</script>
